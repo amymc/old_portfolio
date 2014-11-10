@@ -1,0 +1,79 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #383838;
+  text-align: center;
+  color: #7e8aa2;
+}
+
+.x-axis, .y-axis{
+  fill: gray;
+}
+
+h1{
+  font-size: 50px;
+  font-weight: 600;
+  color: #e74e5a;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: 400;
+}
+
+h3{
+  font-size: 15px;
+}
+
+text{
+  fill: #6499a9;
+}
+
+.bar-chart{
+  margin: 70px 0 50px 0;
+  height: 414px;
+}
+
+.bar-svg{
+  overflow: visible;
+}
+
+.bar {
+  fill: #6499a9;
+}
+
+.bar:hover {
+  fill: #e74e5a;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  margin-top: 20px;
+}
+
+.donut{
+  width: 50%;
+  float: left;
+}
+
+.donut h2{
+  max-width: 450px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.awards h2{
+  margin-top: 27px;
+}
+.awards h3{
+  margin-bottom: 27px;
+}
+
+.disclaimer{
+  font-size: 12px;
+  text-align: left;
+}
