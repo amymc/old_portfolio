@@ -1,0 +1,44 @@
+@import 'shadows';
+@import 'colours';
+@import 'dimensions';
+@import 'gradients';
+@import 'borders';
+@import 'mixins';
+
+
+.grey_shadow_module{
+	border-bottom: $greyshadow_bottom_border;
+	z-index: 2;
+}
+
+.content_module{
+	content: "";
+    position: absolute;
+    top: 0;
+}
+
+.hover_module{
+	background-color: #000;
+	cursor:pointer;
+	.hover_info {
+		display:inline-block;
+	}
+	.overlay_text{
+		display:none;
+	}
+	 &.experience-img-1 {
+		background-image: none;
+	}
+	 &.experience-img-2 {
+		background-image: none;
+	}
+	 &.experience-img-3 {
+		background-image: none;
+	}
+}
+
+.arrivals_module{
+	width: 80%;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+}

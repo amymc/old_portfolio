@@ -27,7 +27,7 @@ var bar_svg = d3.select(".bar-chart").append("svg")
 
 var bar_tip = d3.tip()
       .attr('class', 'd3-tip')
-      .html(function(d) { return  "<span style='color:red'>" + d.rating + "</span>"; });
+      .html(function(d) { return  "<span style='color:#e74e5a;'>" + d.rating + "</span>"; });
 
 /* Invoke the tip in the context of the visualization */
 bar_svg.call(bar_tip);
@@ -130,7 +130,7 @@ d3.csv("../snl_data/nsadata.csv", function(error, data) {
 
   var tip1 = d3.tip()
       .attr('class', 'd3-tip')
-      .html(function(d) { return  "<strong>" + d.data.under_surveillance + ":</strong> <span style='color:red'>" + d.data.percentage + "%</span>"; });
+      .html(function(d) { return  "<strong>" + d.data.under_surveillance + ":</strong> <span style='color:#e74e5a;'>" + d.data.percentage + "%</span>"; });
 
   donut1.call(tip1);
 
@@ -153,7 +153,7 @@ d3.csv("../snl_data/snl_awards.csv", function(error, data) {
 
   var tip2 = d3.tip()
         .attr('class', 'd3-tip')
-        .html(function(d) { return  "<strong>" + d.data.award + ":</strong> <span style='color:red'>" + d.data.number + "</span>"; });
+        .html(function(d) { return  "<strong>" + d.data.award + ":</strong> <span style='color:#e74e5a;'>" + d.data.number + "</span>"; });
 
   donut2.call(tip2);
 

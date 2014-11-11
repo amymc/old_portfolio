@@ -1,0 +1,732 @@
+@import 'compass';
+@include global-reset;
+@import 'bootstrap';
+@import "modules/all";
+@import "partials/buttons";
+
+/*------Utilities----*/
+html, body{
+	margin: 0;
+	padding:0;
+}
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+  overflow-y:scroll;
+ -webkit-overflow-scrolling: touch;
+}
+
+a {
+  &:hover, &:active {
+    text-decoration: none;
+  }
+}
+
+.container-fluid {
+	@include vendorize(box-shadow, $navbar_shadow);
+}
+
+.row{
+	max-width: 100%;
+	margin:0;
+}
+
+.nav {
+	@media screen and (min-width: 768px){
+    	float: right;
+  }
+}
+
+/*----Intro section-----*/
+
+#intro {
+  height: auto;
+}
+
+#intro_message {
+  font-size: 36px;
+  position:fixed;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding-top: 250px;
+  padding-bottom:200px;
+  @media screen and (max-width: 320px) {
+  	padding-top: 200px;
+  }
+  p {
+    font-size: 21px;
+    font-weight: 200;
+  }
+}
+
+#intro_background {
+	height: 680px;
+}
+
+/*--------Skills--------*/
+
+@include keyframes (blink)
+{
+  0% {
+    background: rgba(99, 222, 0, 1);
+  }
+  100% {
+    background: rgba(99, 222, 0, 0);
+  }
+}
+
+#skills {
+  padding-top: 100px;
+  text-align: center;
+  @media screen and (max-width: 320px) {
+	padding-top:60px;
+  }
+  /* iPads (portrait) ----------- */
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+		margin-top: 150px;
+  }
+  /* iPads (landscape) ----------- */
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+			margin-top: 0;
+  }
+}
+
+#skills_list{
+  margin-left: 30px;
+}
+
+/*CSS for the terminal window adapted from here: http://cssdeck.com/labs/pure-css-osx-terminal*/
+
+#window {
+  width: 90%;
+  max-width: 680px;
+  margin: 0 auto 30px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: left;
+  @include vendorize(box-shadow, $window_shadow);
+}
+
+#terminal_body {
+  font-family: Andale Mono, monospace;
+  font-size: 16px;
+  float: left;
+  width: 100%;
+  min-height: 370px;
+  background: #000;
+  padding: 10px;
+  line-height: 1.5em;
+  color: $terminal_body;
+  z-index: 100;
+}
+
+.cursor {
+  background: $terminal_body;
+  display: inline-block;
+  width: 11px;
+  height: 19px;
+  margin-bottom: -3px;
+}
+
+#terminal_body {
+  &:hover .cursor {
+     @include vendorize(animation-name, blink);
+     @include vendorize(animation-duration, 1.5s);
+     @include vendorize(-animation-iteration-count, infinite);
+  }
+  p {
+    margin: 5px 0;
+  }
+}
+
+#toolbar {
+  width: 100%;
+  height: 25px;
+  background: gray;
+  border-radius: 5px 5px 0 0;
+  background: $toolbar_colour;
+  @include background-image(linear-gradient($toolbar_gradient...));
+  @include vendorize(box-shadow, $toolbar_shadow);
+  .top {
+    float: left;
+    width: 100%;
+    height: 23px;
+  }
+  .bottom {
+    float: left;
+    width: 100%;
+    height: 30px;
+  }
+  #lights {
+    float: left;
+    position: relative;
+    top: 4px;
+    left: 7px;
+  }
+}
+
+/*-----TRAFFIC LIGHTS-----*/
+
+.light {
+  float: left;
+  width: $light_size;
+  height: $light_size;
+  border-radius: 50%;
+  overflow: hidden;
+  @include vendorize(box-shadow, $traffic_light_shadow);
+}
+
+#lights:hover .glyph {
+  opacity: 1;
+  cursor: default;
+}
+
+/*--RED--*/
+
+.red {
+  background: $redlight;
+  @include background-image(linear-gradient($redlight_gradient...));
+  &:active {
+    background: $active_redlight;
+    @include background-image(linear-gradient($redlight_active_gradient...));
+  }
+}
+
+/*--YELLOW--*/
+
+.yellow {
+  background: $yellowlight;
+  @include background-image(linear-gradient($yellowlight_gradient...));
+  margin: 0px 7px;
+  &:active {
+    background: $active_yellowlight;
+    @include background-image(linear-gradient($yellowlight_active_gradient...));
+  }
+}
+
+/*--GREEN--*/
+
+.green {
+  background: $greenlight;
+  @include background-image(linear-gradient($greenlight_gradient...));
+  &:active {
+    background: $active_greenlight;
+    @include background-image(linear-gradient($greenlight_active_gradient...));
+  }
+}
+
+/*-----TITLE-----*/
+
+#title {
+  float: left;
+  position: relative;
+  top: 4px;
+  width: 40%;
+  left: 30%;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 14px;
+  text-shadow: $terminal_title_shadow;
+  line-height: 14px;
+}
+
+.folder {
+  float: left;
+  margin-right: 5px;
+  .tab {
+    width: 6px;
+    height: 3px;
+    background: #a4c5da;
+    border: 1px solid #728ea3;
+    border-bottom: none;
+    border-radius: 2px 2px 0px 0px;
+    -webkit-box-shadow: 0px -1px 0px #99b5c7 inset;
+    margin-left: 1px;
+    z-index: 5000;
+    margin-bottom: -1px;
+  }
+  .body {
+    width: 14px;
+    height: 10px;
+    border: 1px solid #6e8ba1;
+    background: #b8cfe0;
+    z-index: -50;
+    @include background-image(linear-gradient($folder_body_gradient...));
+    @include vendorize(box-shadow, $folder_body_shadow);
+  }
+}
+
+/*-------Experience------*/
+
+#experience {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  text-align: center;
+  @media screen and (min-width: 990px) {
+  	padding-top: 200px;
+    padding-bottom: 220px;
+  }
+  @media screen and (min-width: 1230px) {
+    height: auto;
+    margin-top: 0;
+  }
+}
+
+.portfolio_item {
+  margin-bottom: 100px;
+  padding:0;
+}
+
+.col-md-4{
+	padding:0;
+}
+
+/*CSS for the computer monitor adapted from here: http://codepen.io/willpaige/pen/rFElD*/
+
+.screen_container {
+  width: 400px;
+  height: 230px;
+  margin: 0 auto;
+  position: relative;
+  @media screen and (max-width: 429px) {
+    width: 300px;
+    height: 200px;
+  }
+  @media screen and (min-width: 990px) {
+    width: 330px;
+    height: 205px;
+  }
+  > .screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 20px solid $screen_border;
+    border-radius: 10px;
+    text-align: left;
+  }
+}
+
+.monitor {
+  > div {
+    position: absolute;
+  }
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+  }
+}
+
+.base {
+  width: 90px;
+  height: 50px;
+  bottom: -70px;
+  left: 50%;
+  margin-left: -45px;
+  background: $base_colour;
+  &:before, &:after {
+	@extend .content_module;
+  }
+}
+
+.grey-shadow {
+  &:before, &:after {
+    @extend .content_module;
+  }
+}
+
+.base {
+  &:before {
+    border-left: $base_side_border;
+    border-bottom: $base_bottom_border;
+    left: $base_position;
+  }
+  &:after {
+    border-right: $base_side_border;
+    border-bottom:  $base_bottom_border;
+    right: $base_position;
+  }
+  > div {
+    position: absolute;
+  }
+}
+
+.grey-shadow {
+  width: 90px;
+  height: 12px;
+  background: $grey_shadow;
+  top: 0;
+  &:before {
+    @extend .grey_shadow_module;
+    border-left: $greyshadow_side_border;
+    left: $greyshadow_position;
+  }
+  &:after {
+    @extend .grey_shadow_module;
+    border-right: $greyshadow_side_border;
+    right: $greyshadow_position;
+  }
+}
+
+.foot {
+  background: $base_colour;
+  z-index: 1;
+  &.top {
+    width: 116px;
+    height: 5px;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -58px;
+    &:before, &:after {
+    	@extend .content_module;
+    }
+  }
+  &.bottom:before {
+	@extend .content_module;
+  }
+  &.top {
+    &:before {
+      border-left: $foot_side_border;
+      border-bottom: $foot_bottom_border;
+      left: $foot_position;
+    }
+    &:after {
+      border-right: $foot_side_border;
+      border-bottom: $foot_bottom_border;
+      right: $foot_position;
+    }
+  }
+  &.bottom {
+    width: 150px;
+    height: 5px;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -75px;
+    z-index: 999;
+  }
+}
+
+.experience-grid {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  &:after {
+    content: '';
+    display: table;
+  }
+}
+
+.experience-item:before {
+  content: '';
+  display: table;
+}
+
+.experience-grid {
+  &:after {
+    clear: both;
+  }
+  li {
+    display: inline-block;
+  }
+}
+
+.experience-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: default;
+}
+
+
+.experience-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  > div {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.experience-info-front {
+  @include vendorize(background-size, 100% 100%);
+  h3 {
+		color:#fff;
+		letter-spacing: 2px;
+		font-size: 16px;;
+		font-family: 'Open Sans', Arial, sans-serif;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0, 0, 0, 0.3);
+	}
+  &:hover {
+	 @extend .hover_module;
+ 	 }
+  &.experience-img-1 {
+    background-image: url(../images/bragbet_screenshot1.jpg);
+  }
+  &.experience-img-2 {
+    background-image: url(../images/getbulb_screenshot1.jpg);
+  }
+  &.experience-img-3 {
+    background-image: url(../images/myhood_screenshot1.jpg);
+  }
+}
+
+.hover {/* to stop the browser asking you to copy/save/select*/
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.overlay_text{
+	height: 25px;
+	text-align:center;
+	background-color: #fff;
+	border-top: 1px solid $screen_border;
+	position:absolute;
+	bottom:0;
+	width: 100%;
+   .logo{
+		width: 70px;
+		height: auto;
+	}
+}
+
+.hover_info{
+	display:none;
+	color: #fff;
+	font-size: 13px;
+	margin: 0 8%;
+	text-align:center;
+	@media screen and (min-width: 430px) and (max-width: 990px) {
+		padding-top:10px;
+	}
+	h3{
+		margin-top:10px;
+		margin-bottom: 5px;
+		padding-bottom:2px;
+	}
+}
+
+.screenshots_link{
+	padding:10px;
+	margin: 5px auto;
+	width: 70px;
+	font-size: 16px;
+	border: 1px solid #fff;
+	line-height: 18px;
+	@include vendorize(border-radius, 10px);
+	a{
+		color: #fff;
+	}
+	&:hover{
+			a{
+				color:#feff00;
+			}
+		}
+}
+
+.nivo-lightbox-theme-default .nivo-lightbox-title-wrap{
+	bottom: 5%;
+}
+
+.nivo-lightbox-title{
+	width: 100%;
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	top: 0;
+	@media screen and (max-width: 429px) {
+		top: -20px;
+	}
+}
+
+.nivo-lightbox-theme-default .nivo-lightbox-close{
+	opacity: 1;
+	width: 40px;
+	height: 40px;
+	top:4%;
+}
+
+/*-----Contact/arrivals board----*/
+
+#contact {
+  padding: 80px 0 30px 0;
+  @media screen and (min-width: 990px) {
+    padding-bottom: 100px;
+  }
+}
+
+/*CSS for the arrivals board adapted from here: http://culturedcode.com/status*/
+
+.arrivals {
+  width: 90%;
+  margin: 40px auto;
+  font-size: 12px;
+  line-height: 1.2;
+  background-color: #333;
+  @include vendorize(box-shadow, $arrivals_shadow);
+  @include vendorize(border-radius, 6px);
+}
+
+.arrivals-header {
+  padding: 15px 0;
+  margin: 0 auto;
+  width: 70%;
+  font-weight: normal;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 -1px 0 black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  @media screen and (min-width: 768px) {
+    padding: 15px 20px 15px 70px;
+    margin: 0;
+  }
+}
+
+.arrivals-footer {
+  height: 30px;
+  border-top: $arrivals_border;
+}
+
+.arrivals-title {
+  @extend .arrivals_module;
+  @media screen and (min-width: 768px) {
+    width: 55%;
+    float: left;
+    text-align: center;
+    margin-right: 10px;
+    .arrivals-flipbox {
+      text-align: left;
+    }
+  }
+}
+
+.arrivals-status {
+  @extend .arrivals_module;
+  clear: both;
+  @media screen and (min-width: 768px) {
+    width: 40%;
+    clear: none;
+    float: left;
+  }
+}
+
+.arrivals-item {
+  position: relative;
+  overflow:hidden;
+  padding: 17px 0;
+  border-top: $arrivals_border;
+  @media screen and (min-width: 768px) {
+    padding: 0 20px 10px 70px;
+  }
+}
+
+.arrivals-flipbox {
+  position: relative;
+  margin-bottom: 7px;
+  margin-top: 0;
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 38px;
+  font-weight: bold;
+  color: $arrivals_text;
+  text-shadow: 0 -1px 0 black;
+  background: $arrivals_background;
+  text-align: center;
+  @include vendorize(border-radius, 3px);
+}
+
+.arrivals-status .arrivals-flipbox {
+  text-align: center;
+}
+
+.arrivals-flipbox:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  @include background-image(linear-gradient($arrivals_gradient...));
+}
+
+.fa-plane {
+  border-top: 1px solid #fff;
+  padding: 7px 0 3px 0;
+  margin-left: 5px;
+  @include vendorize(transform, scaleY(-1));
+}
+
+.contact_info {
+  color: #fff;
+  width: 75%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1.4;
+  @media screen and (min-width: 768px) {
+    margin: 0 60px;
+    padding: 0 20px 0 20px;
+    width: 90%;
+  }
+}
+
+#contact_links, #github_link {
+  list-style-type: none;
+  width: 90%;
+  margin: 10px auto;
+  li {
+    display: inline;
+    padding: 0 10px;
+    font-size: 2.1rem;
+  }
+  .list-group-item {
+    background: $arrivals_background;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 10px;
+    font-size: 20px;
+    line-height: 38px;
+    font-weight: bold;
+    color: $arrivals_text;
+    border: none;
+    @include vendorize(box-shadow, $contact_links_shadow);
+    @include vendorize(border-radius, 3px);
+    &:hover {
+      color: #feff00;
+    }
+  }
+}
+
+#mail {
+  @media screen and (min-width: 640px) {
+    visibility: hidden;
+    &:before {
+      content: 'amy.mccarthy2@mail.dcu.ie';
+      visibility: visible;
+      padding: 4px;
+    }
+  }
+}
+
+.join_text{
+	@media screen and (max-width: 429px) {
+		display:block;
+		padding-top:10px;
+   }
+}
