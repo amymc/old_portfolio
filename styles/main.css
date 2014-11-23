@@ -8267,12 +8267,10 @@ button.close {
   }
 }
 /*--------Terminal window-------*/
-/*-------arrivals board--------*/
 /*-----Terminal window------*/
 /*------Monitor-------*/
-/*-----arrivals board----*/
+/*-----Alert dialog----*/
 /*--------Terminal window-------*/
-/*-------arrivals board--------*/
 /* line 9, sass/modules/_all.scss */
 .grey_shadow_module, .grey-shadow:before, .grey-shadow:after {
   border-bottom: 12px solid #d8dbe1;
@@ -8313,7 +8311,7 @@ button.close {
 }
 
 /* line 40, sass/modules/_all.scss */
-.arrivals_module, .arrivals-title, .arrivals-status {
+.arrivals_module {
   width: 80%;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
@@ -8515,7 +8513,7 @@ a:hover, a:active {
   font-size: 16px;
   float: left;
   width: 100%;
-  min-height: 370px;
+  min-height: 410px;
   background: #000;
   padding: 10px;
   line-height: 1.5em;
@@ -8962,15 +8960,15 @@ a:hover, a:active {
 }
 /* line 476, sass/main.scss */
 .experience-info-front.experience-img-1 {
-  background-image: url(../images/bragbet_screenshot1.jpg);
+  background-image: url(../images/dots_screenshot1.png);
 }
 /* line 479, sass/main.scss */
 .experience-info-front.experience-img-2 {
-  background-image: url(../images/getbulb_screenshot1.jpg);
+  background-image: url(../images/bragbet_screenshot1.jpg);
 }
 /* line 482, sass/main.scss */
 .experience-info-front.experience-img-3 {
-  background-image: url(../images/myhood_screenshot1.jpg);
+  background-image: url(../images/getbulb_screenshot1.jpg);
 }
 
 /* line 487, sass/main.scss */
@@ -9001,7 +8999,7 @@ a:hover, a:active {
   display: none;
   color: #fff;
   font-size: 13px;
-  margin: 0 8%;
+  margin: 0 12%;
   text-align: center;
 }
 @media screen and (min-width: 430px) and (max-width: 990px) {
@@ -9068,234 +9066,86 @@ a:hover, a:active {
   top: 4%;
 }
 
-/*-----Contact/arrivals board----*/
+/*-----Contact/Alert dialog----*/
 /* line 564, sass/main.scss */
 #contact {
-  padding: 80px 0 30px 0;
-}
-@media screen and (min-width: 990px) {
-  /* line 564, sass/main.scss */
-  #contact {
-    padding-bottom: 100px;
-  }
+  padding: 80px 0 200px 0;
 }
 
-/*CSS for the arrivals board adapted from here: http://culturedcode.com/status*/
-/* line 573, sass/main.scss */
-.arrivals {
-  width: 90%;
-  margin: 40px auto;
-  font-size: 12px;
-  line-height: 1.2;
-  background-color: #333;
-  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-
-/* line 583, sass/main.scss */
-.arrivals-header {
-  padding: 15px 0;
-  margin: 0 auto;
-  width: 70%;
-  font-weight: normal;
-  font-size: 28px;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 -1px 0 black;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
-}
-@media screen and (min-width: 768px) {
-  /* line 583, sass/main.scss */
-  .arrivals-header {
-    padding: 15px 20px 15px 70px;
-    margin: 0;
-  }
-}
-
-/* line 599, sass/main.scss */
-.arrivals-footer {
-  height: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-@media screen and (min-width: 768px) {
-  /* line 604, sass/main.scss */
-  .arrivals-title {
-    width: 55%;
-    float: left;
-    text-align: center;
-    margin-right: 10px;
-  }
-  /* line 611, sass/main.scss */
-  .arrivals-title .arrivals-flipbox {
-    text-align: left;
-  }
-}
-
-/* line 617, sass/main.scss */
-.arrivals-status {
-  clear: both;
-}
-@media screen and (min-width: 768px) {
-  /* line 617, sass/main.scss */
-  .arrivals-status {
-    width: 40%;
-    clear: none;
-    float: left;
-  }
-}
-
-/* line 627, sass/main.scss */
-.arrivals-item {
-  position: relative;
+/* line 568, sass/main.scss */
+.alert_box {
+  height: 200px;
+  width: 500px;
+  background-color: #ededed;
+  border-radius: 5px;
+  border: 1px solid #848484;
   overflow: hidden;
-  padding: 17px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-}
-@media screen and (min-width: 768px) {
-  /* line 627, sass/main.scss */
-  .arrivals-item {
-    padding: 0 20px 10px 70px;
-  }
-}
-
-/* line 637, sass/main.scss */
-.arrivals-flipbox {
-  position: relative;
-  margin-bottom: 7px;
-  margin-top: 0;
-  padding: 0 10px;
-  font-size: 20px;
-  line-height: 38px;
-  font-weight: bold;
-  color: #e0e0e0;
-  text-shadow: 0 -1px 0 black;
-  background: #1a1a1a;
-  text-align: center;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-
-/* line 652, sass/main.scss */
-.arrivals-status .arrivals-flipbox {
-  text-align: center;
-}
-
-/* line 656, sass/main.scss */
-.arrivals-flipbox:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: transparent;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSI0OS45OSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4xNSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNiIvPjxzdG9wIG9mZnNldD0iNTQlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjA1Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(49.99%, rgba(0, 0, 0, 0.15)), color-stop(50%, rgba(0, 0, 0, 0.6)), color-stop(54%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.05)));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 49.99%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 54%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 49.99%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 54%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 49.99%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 54%, rgba(0, 0, 0, 0.05) 100%);
-}
-
-/* line 668, sass/main.scss */
-.fa-plane {
-  border-top: 1px solid #fff;
-  padding: 7px 0 3px 0;
-  margin-left: 5px;
-  -webkit-transform: scaleY(-1);
-  -moz-transform: scaleY(-1);
-  -ms-transform: scaleY(-1);
-  -o-transform: scaleY(-1);
-  transform: scaleY(-1);
-}
-
-/* line 675, sass/main.scss */
-.contact_info {
-  color: #fff;
-  width: 75%;
   margin: 0 auto;
-  text-align: justify;
-  font-size: 20px;
-  font-weight: 200;
-  line-height: 1.4;
+  -webkit-box-shadow: 3px 3px 5px 1px #858585;
+  -moz-box-shadow: 3px 3px 5px 1px #858585;
+  -ms-box-shadow: 3px 3px 5px 1px #858585;
+  -o-box-shadow: 3px 3px 5px 1px #858585;
+  box-shadow: 3px 3px 5px 1px #858585;
 }
-@media screen and (min-width: 768px) {
-  /* line 675, sass/main.scss */
-  .contact_info {
-    margin: 0 60px;
-    padding: 0 20px 0 20px;
-    width: 90%;
+@media (max-width: 500px) {
+  /* line 568, sass/main.scss */
+  .alert_box {
+    width: 280px;
+    height: auto;
+    padding-bottom: 20px;
   }
 }
 
-/* line 690, sass/main.scss */
-#contact_links, #github_link {
-  list-style-type: none;
-  width: 90%;
-  margin: 10px auto;
+/* line 584, sass/main.scss */
+.alert_header {
+  background-color: #dcdcdc;
+  height: 20px;
+  border-bottom: 1px solid #848484;
+  margin-bottom: 15px;
 }
-/* line 694, sass/main.scss */
-#contact_links li, #github_link li {
-  display: inline;
-  padding: 0 10px;
-  font-size: 2.1rem;
+
+/* line 591, sass/main.scss */
+.chrome_logo {
+  height: 70px;
+  width: auto;
+  margin: 0 20px;
+  float: left;
 }
-/* line 699, sass/main.scss */
-#contact_links .list-group-item, #github_link .list-group-item {
-  background: #1a1a1a;
-  -webkit-font-smoothing: antialiased;
-  padding: 0 10px;
-  font-size: 20px;
-  line-height: 38px;
+
+@media (max-width: 500px) {
+  /* line 598, sass/main.scss */
+  .alert_msg {
+    margin: 0 0 15px 110px;
+  }
+}
+
+/* line 604, sass/main.scss */
+.alert_msg_heading {
   font-weight: bold;
-  color: #e0e0e0;
-  border: none;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5) inset, 0 -2px 0 rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
-  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5) inset, 0 -2px 0 rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
-  -ms-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5) inset, 0 -2px 0 rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
-  -o-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5) inset, 0 -2px 0 rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5) inset, 0 -2px 0 rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-/* line 710, sass/main.scss */
-#contact_links .list-group-item:hover, #github_link .list-group-item:hover {
-  color: #feff00;
+  margin-bottom: 10px;
 }
 
-@media screen and (min-width: 640px) {
-  /* line 716, sass/main.scss */
-  #mail {
-    visibility: hidden;
-  }
-  /* line 719, sass/main.scss */
-  #mail:before {
-    content: 'amy.mccarthy2@mail.dcu.ie';
-    visibility: visible;
-    padding: 4px;
+/* line 609, sass/main.scss */
+.contact_link {
+  position: relative;
+  width: 95px;
+  margin: 60px 20px 0 0;
+  border-radius: 5px;
+  border: 1px solid #848484;
+  background-color: #f5f5f5;
+  background-image: linear-gradient(#ffffff, #ededed);
+}
+/* line 619, sass/main.scss */
+.contact_link a {
+  color: #161511;
+}
+@media (max-width: 500px) {
+  /* line 609, sass/main.scss */
+  .contact_link {
+    margin: 10px 0 0 110px;
   }
 }
-
-@media screen and (max-width: 429px) {
-  /* line 727, sass/main.scss */
-  .join_text {
-    display: block;
-    padding-top: 10px;
-  }
+/* line 625, sass/main.scss */
+.contact_link:hover {
+  background-image: linear-gradient(#b8def0, #7ab6ed, #b8def0);
 }

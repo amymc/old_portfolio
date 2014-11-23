@@ -119,7 +119,7 @@ a {
   font-size: 16px;
   float: left;
   width: 100%;
-  min-height: 370px;
+  min-height: 410px;
   background: #000;
   padding: 10px;
   line-height: 1.5em;
@@ -474,13 +474,13 @@ a {
 	 @extend .hover_module;
  	 }
   &.experience-img-1 {
-    background-image: url(../images/bragbet_screenshot1.jpg);
+    background-image: url(../images/dots_screenshot1.png);
   }
   &.experience-img-2 {
-    background-image: url(../images/getbulb_screenshot1.jpg);
+    background-image: url(../images/bragbet_screenshot1.jpg);
   }
   &.experience-img-3 {
-    background-image: url(../images/myhood_screenshot1.jpg);
+    background-image: url(../images/getbulb_screenshot1.jpg);
   }
 }
 
@@ -507,7 +507,7 @@ a {
 	display:none;
 	color: #fff;
 	font-size: 13px;
-	margin: 0 8%;
+	margin: 0 12%;
 	text-align:center;
 	@media screen and (min-width: 430px) and (max-width: 990px) {
 		padding-top:10px;
@@ -559,174 +559,72 @@ a {
 	top:4%;
 }
 
-/*-----Contact/arrivals board----*/
+/*-----Contact/Alert dialog----*/
 
 #contact {
-  padding: 80px 0 30px 0;
-  @media screen and (min-width: 990px) {
-    padding-bottom: 100px;
-  }
+  padding: 80px 0 200px 0;
 }
 
-/*CSS for the arrivals board adapted from here: http://culturedcode.com/status*/
-
-.arrivals {
-  width: 90%;
-  margin: 40px auto;
-  font-size: 12px;
-  line-height: 1.2;
-  background-color: #333;
-  @include vendorize(box-shadow, $arrivals_shadow);
-  @include vendorize(border-radius, 6px);
+.alert_box{
+	height: 200px;
+	width: 500px;
+	background-color: $alert_background_colour;
+	border-radius: 5px;
+	border: $alert_border;
+	overflow: hidden;
+	margin: 0 auto;
+	@include vendorize(box-shadow, 3px 3px 5px 1px #858585);
+	@media (max-width: 500px){
+		width: 280px;
+		height: auto;
+		padding-bottom: 20px;
+	}
 }
 
-.arrivals-header {
-  padding: 15px 0;
-  margin: 0 auto;
-  width: 70%;
-  font-weight: normal;
-  font-size: 28px;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 -1px 0 black;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
-  @media screen and (min-width: 768px) {
-    padding: 15px 20px 15px 70px;
-    margin: 0;
-  }
+.alert_header{
+	background-color: #dcdcdc;
+	height: 20px;
+	border-bottom: $alert_border;
+	margin-bottom: 15px;
 }
 
-.arrivals-footer {
-  height: 30px;
-  border-top: $arrivals_border;
+.chrome_logo{
+	height: 70px;
+	width: auto;
+	margin: 0 20px;
+	float: left;
 }
 
-.arrivals-title {
-  @extend .arrivals_module;
-  @media screen and (min-width: 768px) {
-    width: 55%;
-    float: left;
-    text-align: center;
-    margin-right: 10px;
-    .arrivals-flipbox {
-      text-align: left;
-    }
-  }
+.alert_msg{
+	@media (max-width: 500px){
+		margin: 0 0 15px 110px;
+	}
 }
 
-.arrivals-status {
-  @extend .arrivals_module;
-  clear: both;
-  @media screen and (min-width: 768px) {
-    width: 40%;
-    clear: none;
-    float: left;
-  }
+.alert_msg_heading{
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
-.arrivals-item {
-  position: relative;
-  overflow:hidden;
-  padding: 17px 0;
-  border-top: $arrivals_border;
-  @media screen and (min-width: 768px) {
-    padding: 0 20px 10px 70px;
-  }
-}
-
-.arrivals-flipbox {
-  position: relative;
-  margin-bottom: 7px;
-  margin-top: 0;
-  padding: 0 10px;
-  font-size: 20px;
-  line-height: 38px;
-  font-weight: bold;
-  color: $arrivals_text;
-  text-shadow: 0 -1px 0 black;
-  background: $arrivals_background;
-  text-align: center;
-  @include vendorize(border-radius, 3px);
-}
-
-.arrivals-status .arrivals-flipbox {
-  text-align: center;
-}
-
-.arrivals-flipbox:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: transparent;
-  @include background-image(linear-gradient($arrivals_gradient...));
-}
-
-.fa-plane {
-  border-top: 1px solid #fff;
-  padding: 7px 0 3px 0;
-  margin-left: 5px;
-  @include vendorize(transform, scaleY(-1));
-}
-
-.contact_info {
-  color: #fff;
-  width: 75%;
-  margin: 0 auto;
-  text-align: justify;
-  font-size: 20px;
-  font-weight: 200;
-  line-height: 1.4;
-  @media screen and (min-width: 768px) {
-    margin: 0 60px;
-    padding: 0 20px 0 20px;
-    width: 90%;
-  }
-}
-
-#contact_links, #github_link {
-  list-style-type: none;
-  width: 90%;
-  margin: 10px auto;
-  li {
-    display: inline;
-    padding: 0 10px;
-    font-size: 2.1rem;
-  }
-  .list-group-item {
-    background: $arrivals_background;
-    -webkit-font-smoothing: antialiased;
-    padding: 0 10px;
-    font-size: 20px;
-    line-height: 38px;
-    font-weight: bold;
-    color: $arrivals_text;
-    border: none;
-    @include vendorize(box-shadow, $contact_links_shadow);
-    @include vendorize(border-radius, 3px);
-    &:hover {
-      color: #feff00;
-    }
-  }
-}
-
-#mail {
-  @media screen and (min-width: 640px) {
-    visibility: hidden;
-    &:before {
-      content: 'amy.mccarthy2@mail.dcu.ie';
-      visibility: visible;
-      padding: 4px;
-    }
-  }
-}
-
-.join_text{
-	@media screen and (max-width: 429px) {
-		display:block;
-		padding-top:10px;
-   }
+.contact_link{
+	position: relative;
+	width: 95px;
+	margin: 60px 20px 0 0;
+	border-radius: 5px;
+	border: $alert_border;
+	background-color: #f5f5f5;
+	background-image:linear-gradient(
+		#fff, $alert_background_colour
+	);
+	a{
+		color: #161511;
+	}
+	@media (max-width: 500px){
+		margin: 10px 0 0 110px;
+	}
+	&:hover {
+		background-image: linear-gradient(
+		#b8def0, #7ab6ed, #b8def0
+		);
+	}
 }
