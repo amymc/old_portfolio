@@ -12,6 +12,11 @@ $(document).ready(function(){
     $('.lightbox').nivoLightbox({
         effect: 'fadeScale'
     });
+
+    $('.experience-info-front').on('touchstart', function(e) {
+      e.preventDefault();
+      $(this).addClass('hover_effect');
+    });
 });
 
 //hide nav menu on clicking nav li item

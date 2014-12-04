@@ -8285,28 +8285,28 @@ button.close {
 }
 
 /* line 20, sass/modules/_all.scss */
-.hover_module, .experience-info-front:hover {
+.hover_module, .experience-info-front:hover, .experience-info-front.hover_effect {
   background-color: #000;
   cursor: pointer;
 }
 /* line 23, sass/modules/_all.scss */
-.hover_module .hover_info, .experience-info-front:hover .hover_info {
+.hover_module .hover_info, .experience-info-front:hover .hover_info, .experience-info-front.hover_effect .hover_info {
   display: inline-block;
 }
 /* line 26, sass/modules/_all.scss */
-.hover_module .overlay_text, .experience-info-front:hover .overlay_text {
+.hover_module .overlay_text, .experience-info-front:hover .overlay_text, .experience-info-front.hover_effect .overlay_text {
   display: none;
 }
 /* line 29, sass/modules/_all.scss */
-.hover_module.experience-img-1, .experience-img-1.experience-info-front:hover {
+.hover_module.experience-img-1, .experience-img-1.experience-info-front:hover, .experience-img-1.experience-info-front.hover_effect {
   background-image: none;
 }
 /* line 32, sass/modules/_all.scss */
-.hover_module.experience-img-2, .experience-img-2.experience-info-front:hover {
+.hover_module.experience-img-2, .experience-img-2.experience-info-front:hover, .experience-img-2.experience-info-front.hover_effect {
   background-image: none;
 }
 /* line 35, sass/modules/_all.scss */
-.hover_module.experience-img-3, .experience-img-3.experience-info-front:hover {
+.hover_module.experience-img-3, .experience-img-3.experience-info-front:hover, .experience-img-3.experience-info-front.hover_effect {
   background-image: none;
 }
 
