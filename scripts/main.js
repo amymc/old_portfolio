@@ -15,13 +15,13 @@ $(document).ready(function(){
 
     //replicate hover on touch devices
     $('.experience-info-front').on('touchstart', function(e) {
-      e.preventDefault();
-      $(this).addClass('hover_effect');
+        e.preventDefault();
+        $(this).addClass('hover_effect');
     });
 
     //hide nav menu on clicking nav li item
     $('.nav li a').on('click',function(){
-      $('.navbar-collapse.in').collapse('hide');
+        $('.navbar-collapse.in').collapse('hide');
     });
     
 });
