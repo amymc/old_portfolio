@@ -6,8 +6,8 @@
 
 /*------Utilities----*/
 html, body{
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
   overflow-x: hidden;
@@ -23,17 +23,17 @@ a {
 }
 
 .container-fluid {
-	@include vendorize(box-shadow, $navbar_shadow);
+  @include vendorize(box-shadow, $navbar_shadow);
 }
 
 .row{
-	max-width: 100%;
-	margin:0;
+  max-width: 100%;
+  margin:0;
 }
 
 .nav {
-	@media screen and (min-width: 768px){
-    	float: right;
+  @media screen and (min-width: 768px){
+      float: right;
   }
 }
 
@@ -52,7 +52,7 @@ a {
   padding-top: 250px;
   padding-bottom:200px;
   @media screen and (max-width: 320px) {
-  	padding-top: 200px;
+    padding-top: 200px;
   }
   p {
     font-size: 21px;
@@ -61,7 +61,7 @@ a {
 }
 
 #intro_background {
-	height: 680px;
+  height: 680px;
 }
 
 /*--------Skills--------*/
@@ -80,21 +80,21 @@ a {
   padding-top: 100px;
   text-align: center;
   @media screen and (max-width: 320px) {
-	padding-top:60px;
+  padding-top:60px;
   }
   /* iPads (portrait) ----------- */
   @media only screen
   and (min-device-width : 768px)
   and (max-device-width : 1024px)
   and (orientation : portrait) {
-		margin-top: 150px;
+    margin-top: 150px;
   }
   /* iPads (landscape) ----------- */
   @media only screen
   and (min-device-width : 768px)
   and (max-device-width : 1024px)
   and (orientation : landscape) {
-			margin-top: 0;
+      margin-top: 0;
   }
 }
 
@@ -269,7 +269,7 @@ a {
   padding-bottom: 100px;
   text-align: center;
   @media screen and (min-width: 990px) {
-  	padding-top: 200px;
+    padding-top: 200px;
     padding-bottom: 220px;
   }
   @media screen and (min-width: 1230px) {
@@ -284,7 +284,7 @@ a {
 }
 
 .col-md-4{
-	padding:0;
+  padding:0;
 }
 
 /*CSS for the computer monitor adapted from here: http://codepen.io/willpaige/pen/rFElD*/
@@ -331,7 +331,7 @@ a {
   margin-left: -45px;
   background: $base_colour;
   &:before, &:after {
-	@extend .content_module;
+  @extend .content_module;
   }
 }
 
@@ -384,11 +384,11 @@ a {
     left: 50%;
     margin-left: -58px;
     &:before, &:after {
-    	@extend .content_module;
+      @extend .content_module;
     }
   }
   &.bottom:before {
-	@extend .content_module;
+  @extend .content_module;
   }
   &.top {
     &:before {
@@ -463,16 +463,16 @@ a {
 .experience-info-front {
   @include vendorize(background-size, 100% 100%);
   h3 {
-		color:#fff;
-		letter-spacing: 2px;
-		font-size: 16px;;
-		font-family: 'Open Sans', Arial, sans-serif;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-		text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0, 0, 0, 0.3);
-	}
+    color:#fff;
+    letter-spacing: 2px;
+    font-size: 16px;;
+    font-family: 'Open Sans', Arial, sans-serif;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
   &:hover, &.hover_effect {
-	 @extend .hover_module;
- 	 }
+   @extend .hover_module;
+   }
   &.experience-img-1 {
     background-image: url(../images/dots_screenshot1.png);
   }
@@ -485,78 +485,78 @@ a {
 }
 
 .hover {/* to stop the browser asking you to copy/save/select*/
-	-webkit-user-select: none;
-	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .overlay_text{
-	height: 25px;
-	text-align:center;
-	background-color: #fff;
-	border-top: 1px solid $screen_border;
-	position:absolute;
-	bottom:0;
-	width: 100%;
+  height: 25px;
+  text-align:center;
+  background-color: #fff;
+  border-top: 1px solid $screen_border;
+  position:absolute;
+  bottom:0;
+  width: 100%;
    .logo{
-		width: 70px;
-		height: auto;
-	}
+    width: 70px;
+    height: auto;
+  }
 }
 
 .hover_info{
-	display:none;
-	color: #fff;
-	font-size: 13px;
-	margin: 0 12%;
-	text-align:center;
-	@media screen and (min-width: 430px) and (max-width: 990px) {
-		padding-top:10px;
-	}
-	h3{
-		margin-top:10px;
-		margin-bottom: 5px;
-		padding-bottom:2px;
-	}
+  display:none;
+  color: #fff;
+  font-size: 13px;
+  margin: 0 12%;
+  text-align:center;
+  @media screen and (min-width: 430px) and (max-width: 990px) {
+    padding-top:10px;
+  }
+  h3{
+    margin-top:10px;
+    margin-bottom: 5px;
+    padding-bottom:2px;
+  }
 }
 
 .screenshots_link{
-	padding:10px;
-	margin: 5px auto;
-	width: 70px;
-	font-size: 16px;
-	border: 1px solid #fff;
-	line-height: 18px;
-	@include vendorize(border-radius, 10px);
-	a{
-		color: #fff;
-	}
-	&:hover{
-			a{
-				color:#feff00;
-			}
-		}
+  padding:10px;
+  margin: 5px auto;
+  width: 70px;
+  font-size: 16px;
+  border: 1px solid #fff;
+  line-height: 18px;
+  @include vendorize(border-radius, 10px);
+  a{
+    color: #fff;
+  }
+  &:hover{
+      a{
+        color:#feff00;
+      }
+    }
 }
 
 .nivo-lightbox-theme-default .nivo-lightbox-title-wrap{
-	bottom: 5%;
+  bottom: 5%;
 }
 
 .nivo-lightbox-title{
-	width: 100%;
-	position: absolute;
-	margin: 0 auto;
-	left: 0;
-	top: 0;
-	@media screen and (max-width: 429px) {
-		top: -20px;
-	}
+  width: 100%;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  top: 0;
+  @media screen and (max-width: 429px) {
+    top: -20px;
+  }
 }
 
 .nivo-lightbox-theme-default .nivo-lightbox-close{
-	opacity: 1;
-	width: 40px;
-	height: 40px;
-	top:4%;
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+  top:4%;
 }
 
 /*-----Contact/Alert dialog----*/
@@ -566,65 +566,65 @@ a {
 }
 
 .alert_box{
-	height: 200px;
-	width: 500px;
-	background-color: $alert_background_colour;
-	border-radius: 5px;
-	border: $alert_border;
-	overflow: hidden;
-	margin: 0 auto;
-	@include vendorize(box-shadow, 3px 3px 5px 1px #858585);
-	@media (max-width: 500px){
-		width: 280px;
-		height: auto;
-		padding-bottom: 20px;
-	}
+  height: 200px;
+  width: 500px;
+  background-color: $alert_background_colour;
+  border-radius: 5px;
+  border: $alert_border;
+  overflow: hidden;
+  margin: 0 auto;
+  @include vendorize(box-shadow, 3px 3px 5px 1px #858585);
+  @media (max-width: 500px){
+    width: 280px;
+    height: auto;
+    padding-bottom: 20px;
+  }
 }
 
 .alert_header{
-	background-color: #dcdcdc;
-	height: 20px;
-	border-bottom: $alert_border;
-	margin-bottom: 15px;
+  background-color: #dcdcdc;
+  height: 20px;
+  border-bottom: $alert_border;
+  margin-bottom: 15px;
 }
 
 .chrome_logo{
-	height: 70px;
-	width: auto;
-	margin: 0 20px;
-	float: left;
+  height: 70px;
+  width: auto;
+  margin: 0 20px;
+  float: left;
 }
 
 .alert_msg{
-	@media (max-width: 500px){
-		margin: 0 0 15px 110px;
-	}
+  @media (max-width: 500px){
+    margin: 0 0 15px 110px;
+  }
 }
 
 .alert_msg_heading{
-	font-weight: bold;
-	margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .contact_link{
-	position: relative;
-	width: 95px;
-	margin: 60px 20px 0 0;
-	border-radius: 5px;
-	border: $alert_border;
-	background-color: #f5f5f5;
-	background-image:linear-gradient(
-		#fff, $alert_background_colour
-	);
-	a{
-		color: #161511;
-	}
-	@media (max-width: 500px){
-		margin: 10px 0 0 110px;
-	}
-	&:hover {
-		background-image: linear-gradient(
-		#b8def0, #7ab6ed, #b8def0
-		);
-	}
+  position: relative;
+  width: 95px;
+  margin: 60px 20px 0 0;
+  border-radius: 5px;
+  border: $alert_border;
+  background-color: #f5f5f5;
+  background-image:linear-gradient(
+    #fff, $alert_background_colour
+  );
+  a{
+    color: #161511;
+  }
+  @media (max-width: 500px){
+    margin: 10px 0 0 110px;
+  }
+  &:hover {
+    background-image: linear-gradient(
+    #b8def0, #7ab6ed, #b8def0
+    );
+  }
 }
