@@ -15,8 +15,7 @@ $(document).ready(function(){
 
     //replicate hover on touch devices
     $('.experience-info-front').on('touchstart', function(e) {
-        
-        //e.preventDefault();
+        e.preventDefault();
         $(this).addClass('hover_effect');
     });
 
