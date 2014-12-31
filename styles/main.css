@@ -8972,13 +8972,6 @@ a:hover, a:active {
 }
 
 /* line 487, sass/main.scss */
-.hover {
-  /* to stop the browser asking you to copy/save/select*/
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
-
-/* line 492, sass/main.scss */
 .overlay_text {
   height: 25px;
   text-align: center;
@@ -8988,13 +8981,13 @@ a:hover, a:active {
   bottom: 0;
   width: 100%;
 }
-/* line 500, sass/main.scss */
+/* line 495, sass/main.scss */
 .overlay_text .logo {
   width: 70px;
   height: auto;
 }
 
-/* line 506, sass/main.scss */
+/* line 501, sass/main.scss */
 .hover_info {
   display: none;
   color: #fff;
@@ -9003,19 +8996,19 @@ a:hover, a:active {
   text-align: center;
 }
 @media screen and (min-width: 430px) and (max-width: 990px) {
-  /* line 506, sass/main.scss */
+  /* line 501, sass/main.scss */
   .hover_info {
     padding-top: 10px;
   }
 }
-/* line 515, sass/main.scss */
+/* line 510, sass/main.scss */
 .hover_info h3 {
   margin-top: 10px;
   margin-bottom: 5px;
   padding-bottom: 2px;
 }
 
-/* line 522, sass/main.scss */
+/* line 517, sass/main.scss */
 .screenshots_link {
   padding: 10px;
   margin: 5px auto;
@@ -9029,21 +9022,21 @@ a:hover, a:active {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 530, sass/main.scss */
+/* line 525, sass/main.scss */
 .screenshots_link a {
   color: #fff;
 }
-/* line 534, sass/main.scss */
+/* line 529, sass/main.scss */
 .screenshots_link:hover a {
   color: #feff00;
 }
 
-/* line 540, sass/main.scss */
+/* line 535, sass/main.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-title-wrap {
   bottom: 5%;
 }
 
-/* line 544, sass/main.scss */
+/* line 539, sass/main.scss */
 .nivo-lightbox-title {
   width: 100%;
   position: absolute;
@@ -9052,13 +9045,13 @@ a:hover, a:active {
   top: 0;
 }
 @media screen and (max-width: 429px) {
-  /* line 544, sass/main.scss */
+  /* line 539, sass/main.scss */
   .nivo-lightbox-title {
     top: -20px;
   }
 }
 
-/* line 555, sass/main.scss */
+/* line 550, sass/main.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-close {
   opacity: 1;
   width: 40px;
@@ -9067,12 +9060,12 @@ a:hover, a:active {
 }
 
 /*-----Contact/Alert dialog----*/
-/* line 564, sass/main.scss */
+/* line 559, sass/main.scss */
 #contact {
   padding: 80px 0 200px 0;
 }
 
-/* line 568, sass/main.scss */
+/* line 563, sass/main.scss */
 .alert_box {
   height: 200px;
   width: 500px;
@@ -9088,7 +9081,7 @@ a:hover, a:active {
   box-shadow: 3px 3px 5px 1px #858585;
 }
 @media (max-width: 500px) {
-  /* line 568, sass/main.scss */
+  /* line 563, sass/main.scss */
   .alert_box {
     width: 280px;
     height: auto;
@@ -9096,7 +9089,7 @@ a:hover, a:active {
   }
 }
 
-/* line 584, sass/main.scss */
+/* line 579, sass/main.scss */
 .alert_header {
   background-color: #dcdcdc;
   height: 20px;
@@ -9104,7 +9097,7 @@ a:hover, a:active {
   margin-bottom: 15px;
 }
 
-/* line 591, sass/main.scss */
+/* line 586, sass/main.scss */
 .chrome_logo {
   height: 70px;
   width: auto;
@@ -9113,20 +9106,21 @@ a:hover, a:active {
 }
 
 @media (max-width: 500px) {
-  /* line 598, sass/main.scss */
+  /* line 593, sass/main.scss */
   .alert_msg {
     margin: 0 0 15px 110px;
   }
 }
 
-/* line 604, sass/main.scss */
+/* line 599, sass/main.scss */
 .alert_msg_heading {
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-/* line 609, sass/main.scss */
+/* line 604, sass/main.scss */
 .contact_link {
+  color: #161511;
   position: relative;
   width: 95px;
   margin: 60px 20px 0 0;
@@ -9135,17 +9129,13 @@ a:hover, a:active {
   background-color: #f5f5f5;
   background-image: linear-gradient(#ffffff, #ededed);
 }
-/* line 619, sass/main.scss */
-.contact_link a {
-  color: #161511;
-}
 @media (max-width: 500px) {
-  /* line 609, sass/main.scss */
+  /* line 604, sass/main.scss */
   .contact_link {
     margin: 10px 0 0 110px;
   }
 }
-/* line 625, sass/main.scss */
+/* line 618, sass/main.scss */
 .contact_link:hover {
   background-image: linear-gradient(#b8def0, #7ab6ed, #b8def0);
 }

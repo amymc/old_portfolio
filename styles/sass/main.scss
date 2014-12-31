@@ -602,6 +602,7 @@ a {
 }
 
 .contact_link{
+  color: #161511;
   position: relative;
   width: 95px;
   margin: 60px 20px 0 0;
@@ -611,9 +612,6 @@ a {
   background-image:linear-gradient(
     #fff, $alert_background_colour
   );
-  a{
-    color: #161511;
-  }
   @media (max-width: 500px){
     margin: 10px 0 0 110px;
   }
