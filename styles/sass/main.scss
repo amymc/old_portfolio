@@ -586,11 +586,12 @@ a {
 .chrome_logo{
   height: 70px;
   width: auto;
-  margin: 0 20px;
+  margin: 0 20px 60px 20px;
   float: left;
 }
 
 .alert_msg{
+  margin-bottom: 60px;
   @media (max-width: 500px){
     margin: 0 0 15px 110px;
   }
@@ -604,8 +605,11 @@ a {
 .contact_link{
   color: #161511;
   position: relative;
+  display: inline-block;
+  text-align: center;
   width: 95px;
-  margin: 60px 20px 0 0;
+  padding: 4px 8px;
+  margin-right: 30px;
   border-radius: 5px;
   border: $alert_border;
   background-color: #f5f5f5;
@@ -619,5 +623,8 @@ a {
     background-image: linear-gradient(
     #b8def0, #7ab6ed, #b8def0
     );
+  }
+  &:focus {
+    text-decoration: none;
   }
 }
